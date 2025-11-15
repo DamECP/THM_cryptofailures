@@ -11,14 +11,10 @@ guest_beginning = des_crypt.hash(guest, salt=salt)
 guest_beginning = urllib.parse.quote(guest_beginning, safe ="")
 
 if guest_beginning in cookie:
-    print(guest_beginning)
-    print(cookie)
-    print()
-    print(cookie[15:])
-    print()
     admin_beginning = des_crypt.hash(admin, salt=salt)
     admin_beginning = urllib.parse.quote(admin_beginning, safe="")
     admin_cookie = admin_beginning + cookie[15:]
-    print(admin_beginning)
 
-print(admin_cookie)
+print(cookie)
+
+
